@@ -35,7 +35,7 @@ public class Main {
                 
                 case "empty":
                     if (arr.isEmpty())System.out.println(1);
-                    else System.out.println(2);
+                    else System.out.println(0);
                     break;
 
                 case "pop_front":
