@@ -13,15 +13,11 @@ public class Main {
         LinkedList<Character> arr = new LinkedList<>();
 
         
-        
 
-
-
-        char[] arr2 = str.toCharArray();
 
 
         for (int i = 0; i<str.length(); i++){
-            arr.add(arr2[i]);
+            arr.add(str.charAt(i));
         }
 
         ListIterator<Character> t = arr.listIterator(arr.size());
