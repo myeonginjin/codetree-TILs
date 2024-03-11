@@ -13,9 +13,6 @@ public class Main {
         LinkedList<Character> arr = new LinkedList<>();
 
         
-
-
-
         for (int i = 0; i<str.length(); i++){
             arr.add(str.charAt(i));
         }
@@ -49,10 +46,11 @@ public class Main {
             }
         }
 
-        for (int i = 0; i<arr.size(); i++){
-            System.out.print(arr.get(i));
+        t = arr.listIterator();
+
+        while(t.hasNext()){
+            System.out.print(t.next());
         }
-        
 
 
         
