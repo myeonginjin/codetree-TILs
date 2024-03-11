@@ -45,7 +45,7 @@ public class Main {
             else if (q.equals("D")){
                 if(t.hasNext()) {
                     t.next();
-                    arr.remove();
+                    t.remove();
                 }
             }
             else if (q.equals("R")){
