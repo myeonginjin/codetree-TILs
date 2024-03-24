@@ -22,7 +22,7 @@ public class Main {
     public static void sort(int[] array){
 
         
-        for (int i = 0; i<array.length; i++){
+        for (int i = 0; i<array.length-1; i++){
 
             int min = array[i]; 
             int index = i;
