@@ -32,7 +32,7 @@ public class Main {
         int t = 1; 
 
 
-        for (int k = 0; k<2; k++){
+        for (int k = 0; k<6; k++){
             
             for (int i = 0; i<10; i++){
                 arr[i] = new ArrayList<>();
