@@ -52,7 +52,7 @@ public class Main {
             // }
             
             int index = 0; 
-            for (int i =0; i<9; i++){
+            for (int i =0; i<10; i++){
 
                 for (int j = 0; j<arr[i].size(); j++){
                     ns[index++] = arr[i].get(j);
