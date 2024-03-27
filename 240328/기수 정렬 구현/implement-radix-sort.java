@@ -25,20 +25,22 @@ public class Main {
 
     public static void sort(int[] ns){
 
-    
+        ArrayList<Integer>[] arr = new ArrayList[10];
+
+
+        
         int t = 1; 
-        for (int k = 0; k<6; k++){
+
+
+        for (int k = 0; k<2; k++){
             
-            ArrayList<Integer>[] arr = new ArrayList[10];
-
             for (int i = 0; i<10; i++){
-            arr[i] = new ArrayList<>();
+                arr[i] = new ArrayList<>();
             }
-
 
             for (int i = 0; i<ns.length; i++){
                 int num = ns[i];
-                arr[num % (10*t)].add(ns[i]);
+                arr[num / t  % 10].add(ns[i]);
 
             }  
 
