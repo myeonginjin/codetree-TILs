@@ -12,7 +12,7 @@ public class Main {
 
         ArrayList<Integer> arr = new ArrayList<>();
 
-        while(n > 2){
+        while(n >= 2){
             arr.add(n%2);
             n /= 2;
         }
