@@ -17,7 +17,7 @@ public class Main {
             n /= 2;
         }
         
-        if(n!=0) arr.add(n);
+        arr.add(n);
 
         for (int i = arr.size()-1; i>=0; i--){
             sb.append(arr.get(i));
