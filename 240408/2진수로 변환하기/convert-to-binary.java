@@ -20,10 +20,6 @@ public class Main {
         if(n!=0) arr.add(n);
 
         for (int i = arr.size()-1; i>=0; i--){
-            if(i==0 && arr.get(i)==0){
-                break;
-            }
-
             sb.append(arr.get(i));
         }
 
