@@ -1,21 +1,21 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int maxCnt = 1;
         int cnt = 1;
 
-        int n = sc.nextInt();
+        int n = Integer.parseInt(br.readLine());
         
 
-        int fir = sc.nextInt();
+        int fir = Integer.parseInt(br.readLine());
         int point = fir;
 
         for (int i = 1; i<n; i++){
-            int num = sc.nextInt();
+            int num = Integer.parseInt(br.readLine());
             if (fir == num){
                 cnt++;
 
