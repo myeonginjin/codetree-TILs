@@ -6,7 +6,7 @@ public class Main {
 
 
         int maxCnt = 0;
-        int cnt = 1;
+        int cnt = 0;
 
         int n = sc.nextInt();
         
