@@ -5,8 +5,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
 
-        int maxCnt = 0;
-        int cnt = 0;
+        int maxCnt = 1;
+        int cnt = 1;
 
         int n = sc.nextInt();
         
