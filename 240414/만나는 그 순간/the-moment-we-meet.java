@@ -60,16 +60,16 @@ public class Main  {
             }
         }
 
-        // for (int i = 0; i<=time; i++){
-        //     System.out.print(aSpot[i]+" ");
+        for (int i = 0; i<time; i++){
+            System.out.print(aSpot[i]+" ");
             
-        // }
-        // System.out.println();
-        // for (int i = 0; i<=time; i++){
-        //     System.out.print(bSpot[i]+" ");
+        }
+        System.out.println();
+        for (int i = 0; i<=time; i++){
+            System.out.print(bSpot[i]+" ");
             
-        // }
-        // System.out.println();
+        }
+        System.out.println();
 
         System.out.print(answer);
     }
