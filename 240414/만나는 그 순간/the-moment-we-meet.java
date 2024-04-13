@@ -20,6 +20,8 @@ public class Main  {
         int[] bSpot = new int[1000000];
 
         int time = 0;
+        int aIndex = 0;
+        int bIndex = 0;
 
         for (int i = 0; i<n; i++){
             str = br.readLine();
@@ -29,8 +31,9 @@ public class Main  {
             int dis = Integer.parseInt(st.nextToken());
 
             time += dis;
-
-            move(aSpot, type, dis);
+            move(aSpot, type, dis, aIndex);
+            
+            aIndex += dis;
         }
 
         currentSpot = 0;
@@ -42,12 +45,14 @@ public class Main  {
             char type = st.nextToken().charAt(0);
             int dis = Integer.parseInt(st.nextToken());
 
-            move(bSpot, type, dis);
+            move(bSpot, type, dis, bIndex);
+
+            bIndex += dis;
         }
         
         int answer = -1;
 
-        for (int i = 1; i<time; i++){
+        for (int i = 1; i<=time; i++){
             if(aSpot[i] == bSpot[i]) {
                 
                 answer = i;
@@ -55,20 +60,31 @@ public class Main  {
             }
         }
 
+        // for (int i = 0; i<=time; i++){
+        //     System.out.print(aSpot[i]+" ");
+            
+        // }
+        // System.out.println();
+        // for (int i = 0; i<=time; i++){
+        //     System.out.print(bSpot[i]+" ");
+            
+        // }
+        // System.out.println();
+
         System.out.print(answer);
     }
 
-    public static void move(int[] arr, char t, int d) {
+    public static void move(int[] arr, char t, int d, int index) {
 
         if (t == 'R'){
-            for (int i = 0; i<d; i++){
+            for (int i = index; i< index + d; i++){
                 arr[i] = currentSpot;
                 currentSpot++;
             }
         }
         
         else if (t == 'L'){
-            for (int i = 0; i<d; i++){
+            for (int i = index; i< index + d; i++){
                 arr[i] = currentSpot;
                 currentSpot--;
             }
