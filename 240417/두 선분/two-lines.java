@@ -10,8 +10,7 @@ public class Main {
         int x4 = sc.nextInt();
         String str;
 
-        str = x3 <= x1 && x1 <= x4 ? "intersecting" : "nonintersecting";
-        str = x1 <= x3 && x3 <= x2 ? "intersecting" : "nonintersecting";
+        str = (x3 <= x1 && x1 <= x4) || (x1 <= x3 && x3 <= x2) ? "intersecting" : "nonintersecting";
 
         System.out.print(str);
     }
