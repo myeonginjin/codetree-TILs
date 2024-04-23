@@ -1,24 +1,25 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[4];
+        int[] arr = new int[7];
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-
-        for (int i = 0; i<4; i++){
+        for (int i = 0; i<7; i++) {
             arr[i] = sc.nextInt();
         }
 
-        int sum = 0;
+        Arrays.sort(arr);
 
-        for (int i = 0; i<4; i++){
-            if(arr[i] > sum ) sum = arr[i];
-        }
+        int a = arr[0];
+        int b = arr[1];
 
-        System.out.print(a+ " " + b + " " + (sum - (a+b)));
+
+        int c = a+b != arr[2] ? arr[2] : arr[3];
+
+
+        System.out.print(a+" "+b+" "+c);
 
     }
 }
