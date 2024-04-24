@@ -23,7 +23,7 @@ public class Main {
     public static int getAnswer( ) {
         int maxCnt = 0;
 
-        for (int i = 0; i<3; i++){
+        for (int i = 1; i<=3; i++){
             int[] cup = new int[4];
             int cnt = 0;
 
@@ -34,14 +34,12 @@ public class Main {
                 cup[process[j]] = cup[process[j+1]];
                 cup[process[j+1]] = temp;
 
-                if (cup[process[j+2]] != 1) {
+                if (cup[process[j+2]] == 1) {
                     cnt++;
                 }
-                else{ 
-                    maxCnt = Math.max(maxCnt, cnt);
-                    break;
-                }
             }
+
+            maxCnt = Math.max(maxCnt, cnt);
         }
 
         return maxCnt;
