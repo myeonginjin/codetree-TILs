@@ -31,14 +31,14 @@ public class Main {
 
         int minDis = 20;
         int dis = 0;
-        boolean firstChair = false;
+        boolean cheakFirstChair = false;
 
         for (int i = 0; i<chair.length; i++){
-            if (!firstChair && chair[i]==1) {
-                firstChair = true;
+            if (!cheakFirstChair && chair[i]==1) {
+                cheakFirstChair = true;
                 continue;
             }
-            else if (firstChair) {
+            else if (cheakFirstChair) {
                 if(chair[i] == 0){
                     dis++;
                 }
