@@ -19,6 +19,16 @@ public class Main {
             if(chair[i] != 1) {
                 chair[i] = 1;
                 maxDis = Math.max(checkDis(), maxDis);
+
+                // if (i == 11) {
+                //     for (int j = 0; j<n; j++){
+                //         System.out.print(chair[j] +" ");
+                //     }
+                //     System.out.println();
+                //     System.out.println(maxDis);
+                // }
+                
+
                 chair[i] = 0;
                 
             }
@@ -32,14 +42,21 @@ public class Main {
 
         int minDis = 20;
         int dis = 0;
-        for (int i = 1; i<chair.length; i++){
-            
-            if(chair[i] != 1){
-                dis++;
+        boolean firstChair = false;
+
+        for (int i = 0; i<chair.length; i++){
+            if (!firstChair && chair[i]==1) {
+                firstChair = true;
+                continue;
             }
             else{
-                minDis = Math.min(minDis, dis);
-                dis = 0;
+                if(chair[i] == 0){
+                    dis++;
+                }
+                else{
+                    minDis = Math.min(minDis, dis);
+                    dis = 0;
+                }
             }
         }
 
