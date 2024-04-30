@@ -13,7 +13,7 @@ public class Main {
         int d2 = sc.nextInt();
 
         int date1 = 0;
-        for (int i = 1; i<=m1; i++){
+        for (int i = 1; i<m1; i++){
             date1 += months[i];
         } 
 
@@ -21,13 +21,13 @@ public class Main {
 
 
         int date2 = 0;
-        for (int i = 0; i<=m2; i++){
+        for (int i = 0; i<m2; i++){
             date2 += months[i];
         }
 
         date2 += d2;
 
 
-        System.out.print(date2 - date1);
+        System.out.print(date2 - (date1-1));
     }
 }
