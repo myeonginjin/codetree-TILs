@@ -32,12 +32,12 @@ public class Main {
 
         String ans;
 
-        if(day1 < day2){
+        if(day1 <= day2){
             ans = weeks[dif];
         }
 
         else {
-            ans = weeks[ 7 - dif];
+            ans = weeks[ 7 - dif ];
         }   
 
         System.out.print(ans);
