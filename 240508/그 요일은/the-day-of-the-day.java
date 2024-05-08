@@ -35,7 +35,7 @@ public class Main {
 
         int rest = dif % 7;
 
-        int weekIndex = -1;
+        int weekIndex = 10;
         String[] weeks = new String[]{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
         for (int i = 0; i<7; i++){
@@ -43,6 +43,7 @@ public class Main {
                 weekIndex = i;
             }
         }
+        // System.out.println(cnt+" "+ weekIndex);
 
         if (weekIndex <= rest){
             cnt++;
