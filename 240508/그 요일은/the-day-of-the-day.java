@@ -39,7 +39,7 @@ public class Main {
         String[] weeks = new String[]{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
         for (int i = 0; i<7; i++){
-            if(week == weeks[i]){
+            if(week.equals(weeks[i])){
                 weekIndex = i;
             }
         }
