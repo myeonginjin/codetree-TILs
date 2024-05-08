@@ -35,7 +35,7 @@ public class Main {
 
         int rest = dif % 7;
 
-        int weekIndex = 10;
+        int weekIndex = -1;
         String[] weeks = new String[]{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
         for (int i = 0; i<7; i++){
