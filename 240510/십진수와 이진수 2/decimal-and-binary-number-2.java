@@ -16,6 +16,7 @@ public class Main {
 
         num *= 17;
 
+
         ArrayList<Integer> arr = new ArrayList<>();
 
         while(num > 0){
