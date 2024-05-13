@@ -13,14 +13,14 @@ public class Main {
             char dir = sc.next().charAt(0);
 
             if (dir == 'R'){
-                for (int j = curX+1; j<=curX+dis; j++){
+                for (int j = curX+1; j<curX+dis; j++){
                     arr[j]+=1;
                     
                 }
                 curX += dis;
             }
             else {
-                for (int j = curX-1; j>=curX-dis; j--){
+                for (int j = curX-1; j>curX-dis; j--){
                     arr[j]+=1;
                     
                 }
@@ -32,7 +32,6 @@ public class Main {
             if(arr[i]>=2){
                 cnt++;
             }
-            // System.out.print(arr[i] +" ");
         }
 
         System.out.print(cnt);
