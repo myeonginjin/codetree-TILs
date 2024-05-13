@@ -41,12 +41,12 @@ public class Main {
             }
 
             //2번 이상 지나간 구간을 지나고 있음
-            if (overTwoArea && arr[i]>=2){
+            else if (overTwoArea && arr[i]>=2){
                 cnt++;
             }
 
             //2번 이상 지나간 구간이 시작되었음
-            if(!overTwoArea && arr[i]>=2){
+            else if(!overTwoArea && arr[i]>=2){
                 overTwoArea = true;
             }
 
@@ -61,3 +61,12 @@ public class Main {
 
     }
 }
+
+// 2 2 2 4 4 4 4 5 4 4 3 2 2 4 5 4 5 6 4 4 5 5 5 4 5 4 4 4 4   ->29 -> 28 
+
+// 1 1 1 1 1 3 3 3 4 ->3
+
+// 1 1 1 1 2 1 2 1 
+// 2 3 4 3 3 4 3 -> 6
+
+// 1 1
