@@ -13,28 +13,43 @@ public class Main {
             char dir = sc.next().charAt(0);
 
             if (dir == 'R'){
-                for (int j = curX+1; j<curX+dis; j++){
+                for (int j = curX; j<=curX+dis; j++){
                     arr[j]+=1;
                     
                 }
                 curX += dis;
             }
             else {
-                for (int j = curX-1; j>curX-dis; j--){
+                for (int j = curX; j>=curX-dis; j--){
                     arr[j]+=1;
                     
                 }
                 curX -= dis;
             }
         }
-        int cnt = 0; 
+        int ansCnt = 0; 
+        int cnt = 0;
+        boolean overTwoArea = false;
+
         for (int i = 0; i<arr.length; i++){
-            if(arr[i]>=2){
+
+            if (overTwoArea && arr[i] < 2) {
+                ansCnt += cnt;
+                cnt = 0;
+                overTwoArea = false;
+            }
+
+            else if (overTwoArea && arr[i]>=2){
                 cnt++;
             }
+
+            else if(!overTwoArea && arr[i]>=2){
+                overTwoArea = true;
+            }
+
         }
 
-        System.out.print(cnt);
+        System.out.print(ansCnt);
 
 
     }
