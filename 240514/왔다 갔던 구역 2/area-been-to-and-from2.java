@@ -33,19 +33,26 @@ public class Main {
 
         for (int i = 0; i<arr.length; i++){
 
+            //2번 이상 지나간 구간이 끝났음
             if (overTwoArea && arr[i] < 2) {
                 ansCnt += cnt;
                 cnt = 0;
                 overTwoArea = false;
             }
 
-            else if (overTwoArea && arr[i]>=2){
+            //2번 이상 지나간 구간을 지나고 있음
+            if (overTwoArea && arr[i]>=2){
                 cnt++;
             }
 
-            else if(!overTwoArea && arr[i]>=2){
+            //2번 이상 지나간 구간이 시작되었음
+            if(!overTwoArea && arr[i]>=2){
                 overTwoArea = true;
             }
+
+            // if (arr[i] > 0 ){
+            //     System.out.print(arr[i] +" ");
+            // }
 
         }
 
