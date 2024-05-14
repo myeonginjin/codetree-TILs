@@ -28,10 +28,10 @@ public class Main {
     public static boolean check(int s, int str, int las){
 
         
-        int avg = s / (las - str +1);
-        if (s % (las - str +1) > 0){
-            return false;
-        }
+        double avg = s / (las - str + 1.0);
+        // if (s % (las - str +1) > 0){
+        //     return false;
+        // }
 
 
         boolean find = false;
