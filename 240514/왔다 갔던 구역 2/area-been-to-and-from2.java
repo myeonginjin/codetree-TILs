@@ -19,17 +19,22 @@ public class Main {
                     arr[j]+=1;
                     
                 }
-                curX += dis-1;
+                curX += dis;
             }
             else {
                 for (int j = curX; j>curX-dis; j--){
                     arr[j]+=1;
                     
                 }
-                curX -= dis-1;
+                curX -= dis;
             }
 
             orijinDir = dir;
+
+            for (int j = 995; j<1007; j++){
+                System.out.print(arr[j]+" ");
+            }
+            System.out.println();
 
         }
         int ansCnt = 0; 
@@ -55,9 +60,9 @@ public class Main {
                 overTwoArea = true;
             }
 
-            if (arr[i] > 0 ){
-                System.out.print(arr[i] +" ");
-            }
+            // if (arr[i] > 0 ){
+            //     System.out.print(arr[i] +" ");
+            // }
 
         }
 
