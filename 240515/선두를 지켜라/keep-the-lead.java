@@ -43,10 +43,10 @@ public class Main {
         else if (aRecord[1] < bRecord[1]){
             winner = 'b';
         }
-        
+
         int cnt = 0;
         for (int i = 2; i<aRecord.length; i++){
-            char win = 'c';
+            char win = winner;
             if (aRecord[i] > bRecord[i]){
                 win = 'a';
             }
@@ -59,6 +59,14 @@ public class Main {
                 winner = win;
             }
         }
+
+        // for (int i= 0; i<15; i++){
+        //     System.out.print(aRecord[i]+" ");
+        // }
+        // System.out.println();
+        // for (int i= 0; i<15; i++){
+        //     System.out.print(bRecord[i]+" ");
+        // }
 
         System.out.print(cnt);
         
