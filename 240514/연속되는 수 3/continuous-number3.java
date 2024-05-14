@@ -11,18 +11,20 @@ public class Main {
         int maxLen = 0;
         int len = 1;
 
+
         for (int i = 1; i<n; i++){
             int num = Integer.parseInt(br.readLine());
 
             if(minus && num < 0){
                 len++;
+                maxLen = Math.max(len, maxLen);
             }
             else if (!minus && num > 0){
                 len++;
+                maxLen = Math.max(len, maxLen);
             }
 
             else {
-                maxLen = Math.max(len, maxLen);
                 len = 1;
                 minus = num > 0 ? false : true;
             }
