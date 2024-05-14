@@ -8,10 +8,15 @@ public class Main {
 
         int curX = 1000;
         arr[curX] += 1;
+        char orijinDir = 'N';
 
         for (int i = 0; i<n; i++){
             int dis = sc.nextInt();
             char dir = sc.next().charAt(0);
+
+            if (dir != orijinDir) {
+                    arr[curX] += 1;
+                }
 
             if (dir == 'R'){
                 for (int j = curX+1; j<=curX+dis; j++){
@@ -27,6 +32,9 @@ public class Main {
                 }
                 curX -= dis;
             }
+
+            orijinDir = dir;
+
         }
         int ansCnt = 0; 
         int cnt = 0;
