@@ -8,7 +8,7 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
         int firN = Integer.parseInt(br.readLine());
         boolean minus = firN > 0 ? false : true;
-        int maxLen = 0;
+        int maxLen = 1;
         int len = 1;
 
 
