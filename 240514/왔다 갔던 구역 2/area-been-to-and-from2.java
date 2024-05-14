@@ -7,7 +7,6 @@ public class Main {
         int[] arr = new int[2001];
 
         int curX = 1000;
-        arr[curX] += 1;
         char orijinDir = 'N';
 
         for (int i = 0; i<n; i++){
