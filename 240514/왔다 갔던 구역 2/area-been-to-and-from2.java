@@ -13,14 +13,14 @@ public class Main {
             char dir = sc.next().charAt(0);
 
             if (dir == 'R'){
-                for (int j = curX; j<=curX+dis; j++){
+                for (int j = curX; j<curX+dis; j++){
                     arr[j]+=1;
                     
                 }
                 curX += dis;
             }
             else {
-                for (int j = curX; j>=curX-dis; j--){
+                for (int j = curX; j>curX-dis; j--){
                     arr[j]+=1;
                     
                 }
