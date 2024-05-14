@@ -13,24 +13,20 @@ public class Main {
             int dis = sc.nextInt();
             char dir = sc.next().charAt(0);
 
-            //방향전환이 이뤄졌음, 현재 위치도 2번 이상 지나간 구간이됨
-            if (dir != orijinDir) {
-                    arr[curX] += 1;
-                }
 
             if (dir == 'R'){
-                for (int j = curX+1; j<=curX+dis; j++){
+                for (int j = curX; j<curX+dis; j++){
                     arr[j]+=1;
                     
                 }
-                curX += dis;
+                curX += dis-1;
             }
             else {
-                for (int j = curX-1; j>=curX-dis; j--){
+                for (int j = curX; j>curX-dis; j--){
                     arr[j]+=1;
                     
                 }
-                curX -= dis;
+                curX -= dis-1;
             }
 
             orijinDir = dir;
@@ -59,15 +55,15 @@ public class Main {
                 overTwoArea = true;
             }
 
-            // if (arr[i] > 0 ){
-            //     System.out.print(arr[i] +" ");
-            // }
+            if (arr[i] > 0 ){
+                System.out.print(arr[i] +" ");
+            }
 
         }
 
         // System.out.println();
 
-        System.out.print(ansCnt);
+        // System.out.print(ansCnt);
 
 
     }
