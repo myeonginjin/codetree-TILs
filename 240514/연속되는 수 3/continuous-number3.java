@@ -6,14 +6,18 @@ public class Main {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int firN = Integer.parseInt(br.readLine());
-        boolean minus = firN > 0 ? false : true;
         int maxLen = 1;
         int len = 1;
 
+        boolean minus = false;
 
-        for (int i = 1; i<n; i++){
+        for (int i = 0; i<n; i++){
             int num = Integer.parseInt(br.readLine());
+
+            if(i ==0){
+                minus = num > 0 ? false : true;
+                continue;
+            }
 
             if(minus && num < 0){
                 len++;
