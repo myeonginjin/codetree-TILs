@@ -28,7 +28,7 @@ public class Main {
     public static boolean check(int s, int str, int las){
 
         
-        double avg = s / (las - str + 1.0);
+        double avg = s / (double)(las - str + 1);
         // if (s % (las - str +1) > 0){
         //     return false;
         // }
