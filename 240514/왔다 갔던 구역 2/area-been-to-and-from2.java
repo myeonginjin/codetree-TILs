@@ -13,6 +13,7 @@ public class Main {
             int dis = sc.nextInt();
             char dir = sc.next().charAt(0);
 
+            //방향전환이 이뤄졌음, 현재 위치도 2번 이상 지나간 구간이됨
             if (dir != orijinDir) {
                     arr[curX] += 1;
                 }
