@@ -41,9 +41,6 @@ public class Main {
                 find = true;
             }
         }
-        System.out.println();
-
-
         return find;
     }
 }
