@@ -46,7 +46,8 @@ public class Main {
         //     System.out.println();
         // }
 
-        int maxCnt = 250;
+        int maxCnt = firArr[0].size() * firArr[1].size() * firArr[2].size() + 
+        secArr[0].size() * secArr[1].size() * secArr[2].size();
 
         int totalDuf = 1;
 
@@ -55,6 +56,7 @@ public class Main {
             int duf = 0;
             ArrayList<Integer> t = firArr[i];
             ArrayList<Integer> t2 = secArr[i];
+
             for (int j = 0; j<firArr[i].size(); j++){
                 
                 check[t.get(j)] = true;
