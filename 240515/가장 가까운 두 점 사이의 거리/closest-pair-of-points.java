@@ -21,7 +21,7 @@ public class Main {
             for (int j = 0; j<n; j++){
                 if(i==j) continue;
                 int xDif = Math.abs(x[i] - x[j]);
-                int yDif = Math.abs(x[i] - x[j]);
+                int yDif = Math.abs(y[i] - y[j]);
 
                 dis = (int)(Math.pow(xDif,2)) + (int)(Math.pow(yDif,2));
             }
