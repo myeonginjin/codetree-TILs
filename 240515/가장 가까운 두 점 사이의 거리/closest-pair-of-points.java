@@ -23,9 +23,9 @@ public class Main {
                 int xDif = x[i] - x[j];
                 int yDif = y[i] - y[j];
 
-                dis = xDif*xDif + yDif*yDif;
+                dis = (x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j]);
             }
-            minDis = (x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j]);
+            minDis = Math.min(dis, minDis);
         }
 
         System.out.print(minDis);
