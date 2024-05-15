@@ -10,41 +10,53 @@ public class Main {
 
         for (int i = 0; i<3; i++){
             int num = sc.nextInt();
+            boolean[] exist = new boolean[range+1];
+
             ArrayList<Integer> t = new ArrayList<>();
             for (int j = num; j<=num+2; j++){
                 int temp = j % range;
-                t.add(temp);
+                if(temp==0) temp = range;
+                
+                if(!exist[temp]){
+                    t.add(temp);
+                    exist[temp] = true;
+                }
+                
             }
             for (int j = num-1; j>=num-2; j--){
                 int temp = ((range + j) % range);
                 if(temp==0) temp = range;
-                t.add(temp);
+                if(!exist[temp]){
+                    t.add(temp);
+                    exist[temp] = true;
+                }
             }
             firArr[i] = t;
         }
 
         for (int i = 0; i<3; i++){
             int num = sc.nextInt();
+            boolean[] exist = new boolean[range+1];
             ArrayList<Integer> t = new ArrayList<>();
             for (int j = num; j<=num+2; j++){
                 int temp = j % range;
-                t.add(temp);
+                if(temp==0) temp = range;
+                if(!exist[temp]){
+                    t.add(temp);
+                    exist[temp] = true;
+                }
             }
             for (int j = num-1; j>=num-2; j--){
                 int temp = ((range + j) % range);
                 if(temp==0) temp = range;
-                t.add(temp);
+                if(!exist[temp]){
+                    t.add(temp);
+                    exist[temp] = true;
+                }
             }
             secArr[i] = t;
         }
 
-        // for (int i = 0; i<3; i++){
-        //     ArrayList<Integer> a = firArr[i];
-        //     for (int j = 0; j<a.size(); j++){
-        //         System.out.print(a.get(j)+" ");
-        //     }
-        //     System.out.println();
-        // }
 
         int maxCnt = firArr[0].size() * firArr[1].size() * firArr[2].size() + 
         secArr[0].size() * secArr[1].size() * secArr[2].size();
@@ -71,7 +83,7 @@ public class Main {
             totalDuf *= duf;
         }
 
-        System.out.print(maxCnt - totalDuf);
+        System.out.print(maxCnt-totalDuf);
 
     }
 }
