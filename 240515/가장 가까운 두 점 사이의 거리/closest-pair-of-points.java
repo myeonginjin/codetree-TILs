@@ -19,7 +19,7 @@ public class Main {
         for (int i = 0; i<n; i++){
             int dis = 0;
             for (int j = 0; j<n; j++){
-                if(i==j) continue;
+               //if(i==j) continue;
                 int xDif = x[i] - x[j];
                 int yDif = y[i] - y[j];
 
