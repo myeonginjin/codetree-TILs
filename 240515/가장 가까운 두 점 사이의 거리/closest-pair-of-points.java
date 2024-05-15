@@ -23,7 +23,7 @@ public class Main {
                 int xDif = x[i] - x[j];
                 int yDif = y[i] - y[j];
 
-                dis = (int)(Math.pow(xDif,2)) + (int)(Math.pow(yDif,2));
+                dis = xDif*xDif + yDif*yDif;
             }
             minDis = Math.min(dis, minDis);
         }
