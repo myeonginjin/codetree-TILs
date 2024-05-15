@@ -16,10 +16,9 @@ public class Main {
 
         int minDis = Integer.MAX_VALUE;
 
-        for (int i = 0; i<n; i++){
+        for (int i = 0; i<n-1; i++){
             int dis = 0;
-            for (int j = 0; j<n; j++){
-                if(i==j) continue;
+            for (int j = i+1; j<n; j++){
                 int xDif = x[i] - x[j];
                 int yDif = y[i] - y[j];
 
