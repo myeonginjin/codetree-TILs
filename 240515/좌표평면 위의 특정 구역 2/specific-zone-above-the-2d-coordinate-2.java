@@ -36,7 +36,7 @@ public class Main {
             }
 
             size = (maxY-minY) * (maxX-minX);
-            if(size == 0) continue;
+            // if(size == 0) continue;
             minSize = Math.min(minSize, size);
         }
         System.out.print(minSize);
