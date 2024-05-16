@@ -11,6 +11,7 @@ public class Main {
         for (int i = x; i<=y; i++){
             int sum = getSum(i);
             maxSum = Math.max(maxSum, sum);
+
         }
         System.out.print(maxSum);
         
@@ -24,10 +25,12 @@ public class Main {
                 break;
             }
             String str = String.valueOf(num);
-            int div = (str.length()-1)* 10;
+            int div =  (int)Math.pow(10,(str.length()-1));
             s += num / div;
             num = num % div;
-        }
+
+            // System.out.println(s);
+        }   
         return s;
     }
 }
