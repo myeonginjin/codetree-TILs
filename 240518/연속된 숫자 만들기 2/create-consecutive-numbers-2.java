@@ -12,11 +12,15 @@ public class Main {
 
         int cnt = 0;
 
-        while(cnt < 3){
+        while(true){
             Arrays.sort(arr);
 
             int dif = arr[1] - arr[0];
             int diff = arr[2] - arr[1];
+
+            if(dif == 1 && diff == 1){
+                break;
+            }
 
             if(dif == 2 || diff == 2){
                 cnt++;
