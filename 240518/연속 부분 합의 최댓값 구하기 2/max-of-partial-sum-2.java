@@ -20,7 +20,6 @@ public class Main {
 
             if(sum < 0) {
                 sum = arr[i];
-                continue;
             }
 
             maxSum = Math.max(sum , maxSum);
