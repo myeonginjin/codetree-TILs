@@ -16,10 +16,13 @@ public class Main {
         int sum = 0;
 
         for (int i = 0; i<n; i++){
-            sum += arr[i];
+            
 
             if(sum < 0) {
                 sum = arr[i];
+            }
+            else{
+                sum += arr[i];
             }
 
             maxSum = Math.max(sum , maxSum);
