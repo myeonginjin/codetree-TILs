@@ -20,51 +20,18 @@ public class Main {
         int minC = Math.min(y1,b1);
         int maxC = Math.max(y2,b2);
 
-        boolean fail = false;
+        boolean fail = true;
 
-        //1->2 겹침
-        if(x1<=a1 && a1<=x2){
-            
-            // 1아래 2
-            if(y1<= b2 && b2 <= y2) fail = true;
+        //좌우로 닿지않는 상황
+        if(a2<x1 || a1 > x2){
 
-
-            // 2아래 1
-            if(y1 <= b1 && b1 <= y2) fail = true;
-
-
-            if (b1<=y1 && y1 <=b2){
-                fail = true;
-            }
-
-            if (b1<=y2 && y2 <=b2){
-                fail = true;
-            }
-        }
-        //2->1겹침
-        if(x1<=a2 && a2<=x2) {
-            // 1아래 2
-            if(y1<= b2 && b2 <= y2) fail = true;
-
-
-            // 2아래 1
-            if(y1 <= b1 && b1 <= y2) fail = true;
-
-            if (b1<=y1 && y1 <=b2){
-                fail = true;
-            }
-
-            if (b1<=y2 && y2 <=b2){
-                fail = true;
-            }
+            fail = false;
         }
 
-        if(a1<=x1 && x1<=a2){
-            fail = true;
-        }
-        if (x1<=a1 && a1<x2){
-            fail = true;
-        }
+        //위아래로 닿지않는 상황
+        if(b1 > y2 || b2<y1){
+            fail = false;
+        } 
 
         if(fail){
             ans += "overlapping";
