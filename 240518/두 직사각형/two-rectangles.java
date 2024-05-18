@@ -37,8 +37,9 @@ public class Main {
             // 1아래 2
             if(y1<= b2 && b2 <= y2) fail = true;
 
+
             // 2아래 1
-            if(y2 <= b1 && b2 <= y2) fail = true;
+            if(y1 <= b1 && b1 <= y2) fail = true;
         }
 
         if(fail){
