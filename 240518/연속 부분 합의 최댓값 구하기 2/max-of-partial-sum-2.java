@@ -11,9 +11,10 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int maxSum = 0;
+        int maxSum = Integer.MIN_VALUE;
 
-        int sum = 0;
+        int sum = Integer.MIN_VALUE;
+        
         for (int i = 0; i<n; i++){
             sum += arr[i];
             if(sum < 0) {
