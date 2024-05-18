@@ -19,7 +19,7 @@ public class Main {
             sum += arr[i];
 
             if(sum < 0) {
-                sum = 0;
+                sum = arr[i];
                 continue;
             }
 
