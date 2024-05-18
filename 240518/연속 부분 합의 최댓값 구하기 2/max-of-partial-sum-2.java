@@ -13,10 +13,11 @@ public class Main {
 
         int maxSum = Integer.MIN_VALUE;
 
-        int sum = Integer.MIN_VALUE;
-        
+        int sum = 0;
+
         for (int i = 0; i<n; i++){
             sum += arr[i];
+
             if(sum < 0) {
                 sum = 0;
                 continue;
