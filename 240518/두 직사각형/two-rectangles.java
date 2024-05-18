@@ -24,12 +24,13 @@ public class Main {
 
         //1->2 겹침
         if(x1<=a1 && a1<=x2){
-
+            
             // 1아래 2
             if(y1<= b2 && b2 <= y2) fail = true;
 
+
             // 2아래 1
-            if(y1 <= b1 && b1 <= y1) fail = true;
+            if(y1 <= b1 && b1 <= y2) fail = true;
         }
         //2->1겹침
         if(x1<=a2 && a2<=x2) {
@@ -37,7 +38,7 @@ public class Main {
             if(y1<= b2 && b2 <= y2) fail = true;
 
             // 2아래 1
-            if(y1 <= b1 && b1 <= y1) fail = true;
+            if(y2 <= b1 && b2 <= y2) fail = true;
         }
 
         if(fail){
