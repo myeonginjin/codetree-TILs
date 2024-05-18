@@ -12,7 +12,7 @@ public class Main {
 
         int cnt = 0;
 
-        while(true){
+        while(cnt < 3){
             Arrays.sort(arr);
 
             int dif = arr[1] - arr[0];
@@ -28,7 +28,7 @@ public class Main {
             }
 
             //앞 중간에 낌
-            if (dif < diff){
+            if (dif < diff && dif !=1){
                 int newN = arr[1] - dif / 2;
                 arr[2] = newN;
                 cnt++;
