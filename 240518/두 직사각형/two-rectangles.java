@@ -31,6 +31,15 @@ public class Main {
 
             // 2아래 1
             if(y1 <= b1 && b1 <= y2) fail = true;
+
+
+            if (b1<=y1 && y1 <=b2){
+                fail = true;
+            }
+
+            if (b1<=y2 && y2 <=b2){
+                fail = true;
+            }
         }
         //2->1겹침
         if(x1<=a2 && a2<=x2) {
@@ -40,6 +49,14 @@ public class Main {
 
             // 2아래 1
             if(y1 <= b1 && b1 <= y2) fail = true;
+
+            if (b1<=y1 && y1 <=b2){
+                fail = true;
+            }
+
+            if (b1<=y2 && y2 <=b2){
+                fail = true;
+            }
         }
 
         if(fail){
