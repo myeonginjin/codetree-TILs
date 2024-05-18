@@ -20,7 +20,7 @@ public class Main {
             int nr = r + dr[i];
             int nc = c + dc[i];
 
-            if(canGo(nr,nc) && arr[nr][nc] != 1){
+            if(canGo(nr,nc) && arr[nr][nc] != 1 && visited[nr][nc]!=1){
                 visited[nr][nc] = 1;
                 move(nr, nc);
             }
