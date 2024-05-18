@@ -59,6 +59,13 @@ public class Main {
             }
         }
 
+        if(a1<=x1 && x1<=a2){
+            fail = true;
+        }
+        if (x1<=a1 && a1<x2){
+            fail = true;
+        }
+
         if(fail){
             ans += "overlapping";
         }
