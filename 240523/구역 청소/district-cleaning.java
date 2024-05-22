@@ -15,22 +15,27 @@ public class Main {
         int maxN = 0;
         int minN = 101;
 
+
+        int[] arrr = new int[101];
+
         for(int i = 0; i<2; i++){
             str = br.readLine();
             st = new StringTokenizer(str);
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            
-            maxN = Math.max(maxN, a);
-            maxN = Math.max(maxN,b);
+            for (int j = a; j<b; j++){
+                arrr[j] = 1;
+            }
 
-            minN = Math.min(minN, a);
-            minN = Math.min(minN, b);
         }
-        sb.append(maxN - minN);
+        int cnt = 0;
 
-        System.out.print(sb);
+        for (int i =0; i<arrr.length; i++){
+            if(arrr[i]==1) cnt++;
+        }
+
+        System.out.print(cnt);
         
     }
 }
