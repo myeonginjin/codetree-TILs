@@ -27,9 +27,8 @@ public class Main {
                 ans = -1; 
                 break;
             }
-            else if (minElm != sortArr.get(i)) {
+            else if (ans == -1 && minElm != sortArr.get(i)) {
                 ans = sortArr.get(i);
-                break;
             }
         }
 
