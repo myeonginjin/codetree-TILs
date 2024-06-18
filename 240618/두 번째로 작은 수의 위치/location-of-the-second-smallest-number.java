@@ -31,8 +31,8 @@ public class Main {
                 ans = sortArr.get(i);
             }
         }
-
-        System.out.print(arr.indexOf(ans)+1);
+        
+        ans != -1 ? System.out.print(arr.indexOf(ans)+1) : System.out.print(-1)
 
 
     }
