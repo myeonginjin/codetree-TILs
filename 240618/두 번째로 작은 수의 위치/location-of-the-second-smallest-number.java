@@ -39,6 +39,11 @@ public class Main {
         //     System.out.print(-1);
         // }
 
+        if (ans == -1){
+            Sysem..out.print(-1);
+            System.exit(0);
+        }
+
         System.out.print(arr.indexOf(ans)+1);
 
 
