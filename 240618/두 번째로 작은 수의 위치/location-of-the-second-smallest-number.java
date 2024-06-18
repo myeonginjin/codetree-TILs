@@ -12,7 +12,7 @@ public class Main {
         for (int i = 0; i<n; i++){
             int num = sc.nextInt();
 
-            arr.add(n);
+            arr.add(num);
         }
 
         int ans = -1;
@@ -28,7 +28,7 @@ public class Main {
             for (int i = 0; i<arr.size(); i++){
                 minNum = Math.min(arr.get(i),minNum);
             }
-            minNums[cnt] = minNum; 
+            minNums[cnt] = i+1; 
         }
 
         if(minNums[0] != 0 || minNums[0]!=minNums[1]) {
