@@ -19,21 +19,18 @@ public class Main {
         Collections.sort(sortArr);
         
         int index = -1;
+        int minElm = sortArr.get(0);
+        int ans = -1;
 
-        if(sortArr.get(0) != sortArr.get(1)) {
-            if(sortArr.size() >=3 && sortArr.get(1) != sortArr.get(2)) {
-                index = arr.indexOf(sortArr.get(1)+1);
-            } 
-            else{
-                index = 2;
+        for (int i = 1; i<sortArr.size(); i++){
+            if (ans != -1 && ans == sortArr.get(i)) {
+                ans = -1; 
+                break;
             }
+            else if (minElm != sortArr.get(i)) ans = sortArr.get(i);
         }
-        System.out.print(index);
 
-
-        
-
-
+        System.out.print(arr.indexOf(ans)+1);
 
 
     }
