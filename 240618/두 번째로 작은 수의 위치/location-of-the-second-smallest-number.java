@@ -15,28 +15,26 @@ public class Main {
             arr.add(num);
         }
 
-        int ans = -1;
+        List<Integer> sortArr = new ArrayList(arr);
+        Collections.sort(sortArr);
+        
+        int index = -1;
 
-
-        int cnt = 1;
-
-        int[] minNums = new int[2];
-        int minNum;
-
-        while (cnt--> 0) {
-            minNum = 101;
-            for (int i = 0; i<arr.size(); i++){
-                minNum = Math.min(arr.get(i),minNum);
+        if(sortArr.get(0) != sortArr.get(1)) {
+            if(sortArr.size() >=3 && sortArr.get(1) != sortArr.get(2)) {
+                index = arr.indexOf(sortArr.get(1)+1);
+            } 
+            else{
+                index = 2;
             }
-            minNums[cnt] = i+1; 
         }
+        System.out.print(index);
 
-        if(minNums[0] != 0 || minNums[0]!=minNums[1]) {
-            System.out.print(minNums[0]);
-            
-        }
-        else{
-            System.out.print(ans);
-        }
+
+        
+
+
+
+
     }
 }
