@@ -40,7 +40,7 @@ public class Main {
         // }
 
         if (ans == -1){
-            System..out.print(-1);
+            System.out.print(-1);
             System.exit(0);
         }
 
