@@ -27,7 +27,10 @@ public class Main {
                 ans = -1; 
                 break;
             }
-            else if (minElm != sortArr.get(i)) ans = sortArr.get(i);
+            else if (minElm != sortArr.get(i)) {
+                ans = sortArr.get(i);
+                break;
+            }
         }
 
         System.out.print(arr.indexOf(ans)+1);
