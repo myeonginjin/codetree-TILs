@@ -31,14 +31,14 @@ public class Main {
                 ans = sortArr.get(i);
             }
         }
-        if (ans != -1){
-            System.out.print(arr.indexOf(ans)+1);
-        }
-        else{
-            System.out.print(-1);
-        }
+        // if (ans != -1){
+        //     System.out.print(arr.indexOf(ans)+1);
+        // }
+        // else{
+        //     System.out.print(-1);
+        // }
 
-        //ans = ans!=-1 ? arr.indexOf(ans)+1 : -1;
+        ans = ans!=-1 ? arr.indexOf(ans)+1 : -1;
         System.out.print(ans);
 
 
