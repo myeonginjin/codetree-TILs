@@ -25,7 +25,6 @@ public class Main {
         for (int i = 1; i<sortArr.size(); i++){
             if (ans != -1 && ans == sortArr.get(i)) {
                 ans = -1; 
-                break;
             }
             else if (ans == -1 && minElm != sortArr.get(i)) {
                 ans = sortArr.get(i);
