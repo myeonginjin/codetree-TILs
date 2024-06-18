@@ -25,7 +25,8 @@ public class Main {
         for (int i = 1; i<sortArr.size(); i++){
             if (ans != -1 && ans == sortArr.get(i)) {
                 ans = -1; 
-                break;
+                System.out.print(-1);
+                System.exit(-1);
             }
             else if (ans == -1 && minElm != sortArr.get(i)) {
                 ans = sortArr.get(i);
@@ -38,8 +39,7 @@ public class Main {
         //     System.out.print(-1);
         // }
 
-        ans = ans!=-1 ? arr.indexOf(ans)+1 : -1;
-        System.out.print(ans);
+        System.out.print(arr.indexOf(ans)+1);
 
 
 
