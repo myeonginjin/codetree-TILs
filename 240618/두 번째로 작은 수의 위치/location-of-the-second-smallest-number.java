@@ -26,7 +26,7 @@ public class Main {
             if (ans != -1 && ans == sortArr.get(i)) {
                 ans = -1; 
                 System.out.print(-1);
-                System.exit(-1);
+                System.exit(1);
             }
             else if (ans == -1 && minElm != sortArr.get(i)) {
                 ans = sortArr.get(i);
