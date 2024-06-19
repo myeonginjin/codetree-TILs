@@ -33,7 +33,7 @@ public class Main {
                     // for (k = j; k<=j+i; k++) {
                     //      System.out.print(arr[k]+" ");
                     // }
-                    System.out.println(i+" "+j);
+                    //System.out.println(i+" "+j);
                 }
             
             }
