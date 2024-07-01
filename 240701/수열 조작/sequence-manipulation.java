@@ -7,13 +7,17 @@ public class Main {
         ArrayDeque<Integer> d = new ArrayDeque<>();
 
         for (int i = n; i>=1; i--) {
-            d.offer(i);
+            d.offerFirst(i);
         }
+        
 
-        while(d.size()>2) {
+
+        while(d.size()>1) {
             d.pollFirst();
             int t = d.pollFirst();
             d.offerLast(t);
+
+            //System.out.println(d);
         }
 
         System.out.print(d.poll());
