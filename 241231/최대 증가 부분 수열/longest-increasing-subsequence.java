@@ -26,6 +26,7 @@ public class Main {
 
             for (int j = 0; j<=i; j++) {
                 if(node > arr[j]) dp[i] = Math.max( dp[i], dp[j] + 1 );
+                else dp[i] = Math.max(dp[i], dp[j]);
             }
         }
 
