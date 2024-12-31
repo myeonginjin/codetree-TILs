@@ -23,6 +23,7 @@ public class Main {
 
         for (int i = 1; i<n; i++){
             int node = arr[i];
+            dp[i] = 1;
 
             for (int j = 0; j<=i; j++) {
                 if(node > arr[j]) dp[i] = Math.max( dp[i], dp[j] + 1 );
