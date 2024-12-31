@@ -24,10 +24,9 @@ public class Main {
         for (int i = 1; i<n; i++){
             int node = arr[i];
 
-            if(node > arr[i-1]) {
-                dp[i] = dp[i-1] + 1;
+            for (int j = 0; j<=i; j++) {
+                if(node > arr[j]) dp[i] = Math.max( dp[i], dp[j] + 1 );
             }
-            else dp[i] = dp[i-1];
         }
 
         System.out.print(dp[n-1]);
