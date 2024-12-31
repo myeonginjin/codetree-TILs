@@ -28,7 +28,7 @@ public class Main {
             int elm = arr[i];
 
             for (int j = 0; j<i; j++) {
-                if(elm > dp[j]) dp[i] = Math.max(dp[i], dp[j] + 1);
+                if(elm > arr[j]) dp[i] = Math.max(dp[i], dp[j] + 1);
             }
         }
 
