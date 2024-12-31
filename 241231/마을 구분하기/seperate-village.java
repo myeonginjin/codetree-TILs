@@ -24,8 +24,8 @@ public class Main {
         for (int i = 0; i<n; i++){
             for (int j = 0; j<n; j++){
                 if(arr[i][j] == 1 && visit[i][j] == false) {
-                    size = 0;
-                    dfs(i, j, 1);
+                    size = 1;
+                    dfs(i, j);
                     q.add(size);
                     cnt++;
                 }
@@ -34,18 +34,28 @@ public class Main {
         System.out.println(cnt);
         
         while(!q.isEmpty()) System.out.println(q.poll());
+
+        System.out.println();
+
+        // for (int i = 0; i<n; i++) {
+        //     for (int j = 0; j<n; j++){
+        //         if(visit[i][j]) System.out.print("1 ");
+        //         else System.out.print("0 "); 
+        //     }
+        //     System.out.println();
+        // }
     }
 
-    static void dfs(int r , int c, int s) {
+    static void dfs(int r , int c) {
         visit[r][c] = true;
-        size = s;
 
         for (int i = 0; i<4; i++) {
             int nr = r + dr[i];
             int nc = c + dc[i];
 
             if(indexOk(nr, nc) && arr[nr][nc]==1 && !visit[nr][nc]) {
-                dfs(nr, nc, s+1);
+                size++;
+                dfs(nr, nc);
             }
         }
     }
