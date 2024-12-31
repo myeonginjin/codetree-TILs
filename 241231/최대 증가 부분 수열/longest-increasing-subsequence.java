@@ -26,10 +26,10 @@ public class Main {
 
             for (int j = 0; j<=i; j++) {
                 if(node > arr[j]) dp[i] = Math.max( dp[i], dp[j] + 1 );
-                else dp[i] = Math.max(dp[i], dp[j]);
+                //else dp[i] = Math.max(dp[i], dp[j]);
             }
         }
-
+        Arrays.sort(dp);
         System.out.print(dp[n-1]);
 
     }
