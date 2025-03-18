@@ -6,8 +6,12 @@ public class Main {
         int B = sc.nextInt();
         int C = sc.nextInt();
 
-        System.out.println(numsOfDays(A, B, C) - numsOfDays(11,11,11));
-
+        int diff = numsOfDays(A, B, C) - numsOfDays(11,11,11);
+        if(diff < 0){
+            System.out.println(-1);
+        }else{
+            System.out.println(diff);
+        }
     }
 
     public static int numsOfDays(int day, int hour, int min){
