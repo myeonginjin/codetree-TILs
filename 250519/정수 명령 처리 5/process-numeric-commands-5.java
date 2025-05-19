@@ -7,7 +7,7 @@ public class Main {
 
         ArrayList<Integer> arr = new ArrayList<>();
 
-        for(int i = 0; i < N; i++){
+        for(int i = 0; i < n; i++){
             String command = sc.next();
 
             if(command.equals("push_back")){
