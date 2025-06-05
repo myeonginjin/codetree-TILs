@@ -8,13 +8,13 @@ public class Main {
         Stack<String> s = new Stack<>();
 
         for (int i = 0; i<str.length(); i++) {
-            String t = s.substring(i, i+1);
+            String t = str.substring(i, i+1);
 
             if(t.equals("(")) s.push(t);
             else s.pop();
         }        
 
-        String ans = s.isEmpty() ? "YES" : "NO"
+        String ans = s.isEmpty() ? "Yes" : "No";
 
         System.out.println(ans);
     }
