@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        Stack<String> s = new Stack<>();
+
+        for (int i = 0; i<str.length(); i++) {
+            String t = s.substring(i, i+1);
+
+            if(t.equals("(")) s.push(t);
+            else s.pop();
+        }        
+
+        String ans = s.isEmpty() ? "YES" : "NO"
+
+        System.out.println(ans);
+    }
+}
