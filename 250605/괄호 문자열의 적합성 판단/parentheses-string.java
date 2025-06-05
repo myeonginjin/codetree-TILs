@@ -18,6 +18,7 @@ public class Main {
                 } else {
                     s.pop();
                 }
+            }
         }        
 
         String ans = s.isEmpty() ? "Yes" : "No";
