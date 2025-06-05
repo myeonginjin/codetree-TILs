@@ -11,9 +11,13 @@ public class Main {
             String t = str.substring(i, i+1);
 
             if(t.equals("(")) s.push(t);
-            else {
-               if(!s.isEmpty()) s.pop();
-            }
+            else { // t == ')'
+                if (s.isEmpty()) {
+                    System.out.println("No");
+                    return;
+                } else {
+                    s.pop();
+                }
         }        
 
         String ans = s.isEmpty() ? "Yes" : "No";
