@@ -11,7 +11,9 @@ public class Main {
             String t = str.substring(i, i+1);
 
             if(t.equals("(")) s.push(t);
-            else s.pop();
+            else {
+               if(!s.isEmpty()) s.pop();
+            }
         }        
 
         String ans = s.isEmpty() ? "Yes" : "No";
