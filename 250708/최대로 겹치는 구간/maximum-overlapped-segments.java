@@ -12,19 +12,23 @@ public class Main {
 
 
 
-        int[] arr = new int[101];
+        int[] arr = new int[201];
 
         for (int i = 0; i<n; i++) {
             int str = x1[i];
             int end = x2[i];
 
             for (int j = str; j<end; j++) {
-                arr[j]++;
+                arr[j+100]++;
             }
         }
         int ans = 0;
-        for (int i = 0; i<101; i++) {
-            ans = Math.max(ans, arr[i]);
+        int idx = 0;
+        for (int i = 0; i<201; i++) {
+            if (ans < arr[i]) {
+                idx = i - 100;
+                ans = arr[i];
+            }
         }
 
         System.out.println(ans);
