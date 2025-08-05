@@ -6,6 +6,8 @@ public class Main {
         int rowNum = sc.nextInt();
         int colNum = sc.nextInt();
         // Please write your code here.
+
+        func(rowNum, colNum);
     }
 
     static void func(int row, int col){
