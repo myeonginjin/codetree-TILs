@@ -22,20 +22,23 @@ public class Main {
         for(int i = 1; i<= m2; i++){
             sum2 += days_of_months_leap[i];
         }
-
         sum2 += d2;
-
-        int rest_of_days = (sum2 - sum1)/7;
         String[] days_of_weeks = new String[]{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
-        String target = days_of_weeks[(sum2 - sum1)%7];
-        System.out.println(rest_of_days);
-        System.out.println((sum2- sum1)%7);
-        System.out.println(target);
-        if(target == A){
-            rest_of_days += 1;
+        int weekIndex = 0;
+        for(int i = 0; i<days_of_weeks.length; i++){
+            if(A.equals(days_of_weeks[i])){
+                weekIndex = i;
+            }
         }
+        System.out.println(weekIndex);
 
-        System.out.println(rest_of_days);
+        int answer = 0;
+        for(int i = sum1; i<= sum2; i++){
+            if(weekIndex == i){
+                answer++;
+            }
+        }
+        System.out.println(answer);
     }
 }
