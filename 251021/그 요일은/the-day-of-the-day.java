@@ -35,7 +35,7 @@ public class Main {
 
         int answer = 0;
         for(int i = sum1; i<= sum2; i++){
-            if(weekIndex == i%7){
+            if(weekIndex == i-1%7){
                 answer++;
             }
         }
