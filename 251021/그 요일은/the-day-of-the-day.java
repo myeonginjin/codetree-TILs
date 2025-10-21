@@ -31,14 +31,20 @@ public class Main {
                 weekIndex = i;
             }
         }
-        //System.out.println(weekIndex);
 
+        // --- 수정된 부분 ---
         int answer = 0;
-        for(int i = sum1; i<= sum2; i++){
-            if(weekIndex == (i-1)%7){
+        int currentDayOfWeek = 0; // 시작일(m1/d1)을 월요일(0)로 가정
+
+        for(int i = sum1; i <= sum2; i++){
+            // 현재 요일이 목표 요일(A)과 같은지 확인
+            if(currentDayOfWeek == weekIndex){
                 answer++;
             }
+            // 하루가 지났으므로 요일을 다음 날로 변경
+            currentDayOfWeek = (currentDayOfWeek + 1) % 7;
         }
+        
         System.out.println(answer);
     }
 }
