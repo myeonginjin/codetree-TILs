@@ -5,18 +5,12 @@ public class Main {
         int A = sc.nextInt();
         int B = sc.nextInt();
         int C = sc.nextInt();
-        // Please write your code here.
+        
+        int sum1 = A*24*60 + B*60 + C;
+        int sum2 = 11*24*60 + 11*60 + 11;
 
-        A += A*24*60;
-        B += B*60;
-        int sum1 = A + B + C;
-
-        int sum2 = 0;
-        sum2 += 11 * 24 * 60;
-        sum2 += 11*60;
-        sum2 += 11;
-
-        System.out.println(Math.abs(sum2 - sum1));
+        System.out.println(Math.abs(sum1 - sum2));
+        
 
     }
 }
