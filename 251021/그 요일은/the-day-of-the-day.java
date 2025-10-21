@@ -31,11 +31,11 @@ public class Main {
                 weekIndex = i;
             }
         }
-        System.out.println(weekIndex);
+        //System.out.println(weekIndex);
 
         int answer = 0;
         for(int i = sum1; i<= sum2; i++){
-            if(weekIndex == i){
+            if(weekIndex == i%7){
                 answer++;
             }
         }
