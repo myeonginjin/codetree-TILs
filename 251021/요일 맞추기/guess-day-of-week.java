@@ -22,37 +22,13 @@ public class Main {
         }
         sum2 += d2;
 
-        int result = Math.abs(sum2 - sum1)%7;
-        
-        // 6 = 일요일
-        // 5 = 토요일
-        // 4 = 금요일
-        // 3 = 목요일
-        // 2 = 수요일
-        // 1 = 화요일
-        // 0 = 월요일
-        // -1 = 일요일
-        // -2 = 토요일
-        // -3 = 금요일
-        // -4 = 목요일
-        // -5 = 수요일
-        // -6 = 화요일
-    
-        if(result == 1 || result == -6){
-    System.out.println(Tue");
-}else if(result == 2 || result == -5){
-    System.out.println("Wed");
-}else if(result == 3 || result == -4){
-    System.out.println("Thu");
-}else if(result == 4 || result == -3){
-    System.out.println("Fri");
-}else if(result == 5 || result == -2){
-    System.out.println("Sat");
-}else if(result == 6 || result == -1){
-    System.out.println("Sun");
-}else if(result == 0){
-    System.out.println("Mon");
-}
+        int result = sum2 - sum1;
+
+        result += 7;
+
+        String[] days_of_week = new String[]{"Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sum"};
+
+        System.out.println(days_of_week[result%7]);
 
     }
 }
