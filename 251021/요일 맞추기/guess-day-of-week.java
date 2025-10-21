@@ -26,7 +26,7 @@ public class Main {
 
         result += 7;
 
-        String[] days_of_week = new String[]{"Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sum"};
+        String[] days_of_week = new String[]{"Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sun"};
 
         System.out.println(days_of_week[result%7]);
 
