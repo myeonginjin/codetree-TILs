@@ -29,9 +29,9 @@ public class Main {
         String[] days_of_weeks = new String[]{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
         String target = days_of_weeks[(sum2 - sum1)%7];
-        // System.out.println(rest_of_days);
-        // System.out.println((sum2- sum1)%7);
-        // System.out.println(target);
+        System.out.println(rest_of_days);
+        System.out.println((sum2- sum1)%7);
+        System.out.println(target);
         if(target == A){
             rest_of_days += 1;
         }
