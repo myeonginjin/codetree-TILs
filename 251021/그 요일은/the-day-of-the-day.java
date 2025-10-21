@@ -13,13 +13,13 @@ public class Main {
 
         // A요일은 몇 번 등장하게 되는지
         int sum1 = 0;
-        for(int i = 1; i<= m1; i++){
+        for(int i = 1; i< m1; i++){
             sum1 += days_of_months_leap[i];
         }
         sum1 += d1;
 
         int sum2 = 0;
-        for(int i = 1; i<= m2; i++){
+        for(int i = 1; i< m2; i++){
             sum2 += days_of_months_leap[i];
         }
         sum2 += d2;
