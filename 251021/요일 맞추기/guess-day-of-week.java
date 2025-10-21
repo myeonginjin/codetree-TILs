@@ -39,19 +39,19 @@ public class Main {
         // -6 = 화요일
     
         if(result == 1 || result == -6){
-    System.out.println("화");
+    System.out.println(Tue");
 }else if(result == 2 || result == -5){
-    System.out.println("수");
+    System.out.println("Wed");
 }else if(result == 3 || result == -4){
-    System.out.println("목");
+    System.out.println("Thu");
 }else if(result == 4 || result == -3){
-    System.out.println("금");
+    System.out.println("Fri");
 }else if(result == 5 || result == -2){
-    System.out.println("토");
+    System.out.println("Sat");
 }else if(result == 6 || result == -1){
-    System.out.println("일");
+    System.out.println("Sun");
 }else if(result == 0){
-    System.out.println("월");
+    System.out.println("Mon");
 }
 
     }
