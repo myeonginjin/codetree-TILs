@@ -10,6 +10,9 @@ public class Main {
 
         while(true){
             if(n < 2){
+                if(n == 0){
+                    digits[cnt++] = 0;
+                }
                 digits[cnt++] = 1;
                 break;
             }
