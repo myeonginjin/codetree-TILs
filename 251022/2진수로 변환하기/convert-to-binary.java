@@ -12,6 +12,7 @@ public class Main {
             if(n < 2){
                 if(n == 0){
                     digits[cnt++] = 0;
+                    break;
                 }
                 digits[cnt++] = 1;
                 break;
