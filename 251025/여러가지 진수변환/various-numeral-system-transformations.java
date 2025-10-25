@@ -14,7 +14,7 @@ public class Main {
             }
 
             arr[cnt++] = n % b;
-            n = n / 4;
+            n = n / b;
         }
 
         for(int i = cnt; i >= 0; i--){
