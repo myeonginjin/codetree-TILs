@@ -28,7 +28,7 @@ public class Main {
         int max = 0;
 
         for(int i = 0; i<index_max; i++){
-            if(max > count[i]){
+            if(max < count[i]){
                 max = count[i];
             }
         }
