@@ -8,7 +8,7 @@ public class Main {
         int[] arr = new int[n];
         int cnt = 0;
         while(true){
-            if(n < 2){
+            if(n < b){
                 arr[cnt] = n;
                 break;
             }
