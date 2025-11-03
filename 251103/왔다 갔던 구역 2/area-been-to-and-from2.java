@@ -35,7 +35,7 @@ public class Main {
 
         for(int i = 0; i< N; i++){
             for(int j = start[i]; j < end[i]; j++){
-                count[i]++;
+                count[j]++;
             }
         }
         
