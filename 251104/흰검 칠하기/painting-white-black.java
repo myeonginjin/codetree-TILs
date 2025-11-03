@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int MAX_K = 10000;
+        int MAX_K = 100000;
 
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();        
@@ -9,14 +9,12 @@ public class Main {
         int[] countL = new int[2 * MAX_K + 1];
         int[] countR = new int[2 * MAX_K + 1];
 
-        int cur = 0;
+        int cur = MAX_K;
 
         for (int i = 0; i < N; i++) {
             int x = sc.nextInt();
             char d = sc.next().charAt(0);
-            
-            int start = 0;
-            int end = 0;
+        
 
             if(d == 'R'){
                 while(x-- > 0){
@@ -29,7 +27,7 @@ public class Main {
                 while(x-- >0){
                     count[cur] = 1;
                     countL[cur]++;
-                    if(x>0) cur++;
+                    if(x>0) cur--;
                 }
             }
         }
@@ -42,7 +40,7 @@ public class Main {
             if(countL[i] >= 2 && countR[i] >= 2){
                 greyCount++;
             }else if(count[i] == 1 ) whiteCount++;
-            else if(count[i] == 2) blackCount
+            else if(count[i] == 2) blackCount++;
         }
 
         System.out.println(whiteCount + " " + blackCount + " " + greyCount);
