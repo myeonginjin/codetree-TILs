@@ -53,9 +53,10 @@ public class Main {
 
         if(!fit){
             System.out.println(0);
-        }
+        }else{
         //System.out.println(maxX + " " + maxY);
         //System.out.println(minX + " " + minY);
         System.out.println((maxX-minX+1) * (maxY-minY+1));
+        }
     }
 }
