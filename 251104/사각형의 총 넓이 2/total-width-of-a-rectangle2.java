@@ -4,7 +4,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int MAX_N = 10;
-        int OFFSET = 200;
+        int OFFSET = 200; // OFFSET은 어떻게 ? 음수만큼 
 
         int[] x1 = new int[MAX_N];
         int[] y1 = new int[MAX_N];
