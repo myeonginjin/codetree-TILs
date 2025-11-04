@@ -1,48 +1,44 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int MAX_K = 100000;
-
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();        
-        int[] count = new int[2 * MAX_K + 1];
-        int[] countL = new int[2 * MAX_K + 1];
-        int[] countR = new int[2 * MAX_K + 1];
+        int OFFSET = 1000000;
+        int N = sc.nextInt();
 
-        int cur = MAX_K;
+        int[] sumCount = new int[N + OFFSET * 2 + 1];
+        int[] countWhite = new int[N + OFFSET * 2 + 1];
+        int[] countBlack = new int[N + OFFSET * 2 + 1];
 
+        int cur = OFFSET;
         for (int i = 0; i < N; i++) {
             int x = sc.nextInt();
             char d = sc.next().charAt(0);
-        
 
-            if(d == 'R'){
+            if(d == 'L'){
                 while(x-- > 0){
-                    count[cur] = 2;
-                    countR[cur]++;
-                    if(x>0) cur++;
+                    sumCount[cur] = 1;
+                    countWhite[cur]++;
+                    if(x > 0) cur--; // 현재 위치를 왼쪽으로 이동시킴
                 }
-            }
-            else{
-                while(x-- >0){
-                    count[cur] = 1;
-                    countL[cur]++;
-                    if(x>0) cur--;
+            }else{
+                while(x-- > 0){
+                    sumCount[cur] = 2;
+                    countBlack[cur]++;
+                    if(x > 0) cur++; // 현재 위치를 오른쪽으로 이동시킴
                 }
-            }
+            }    
         }
-        // 문제는 같은 방향으로 총 4번 있는 거는 어떻게 표현할 것인가?
         int greyCount = 0;
-        int whiteCount = 0;
-        int blackCount = 0;
+            int whiteCount = 0;
+            int blackCount = 0;
 
-        for(int i = 0; i < 2 * MAX_K; i++){
-            if(countL[i] >= 2 && countR[i] >= 2){
-                greyCount++;
-            }else if(count[i] == 1 ) whiteCount++;
-            else if(count[i] == 2) blackCount++;
-        }
-
-        System.out.println(whiteCount + " " + blackCount + " " + greyCount);
+            for(int i = 0; i<= 2 * OFFSET; i++){
+                if(countBlack[i] >= 2 && countWhite[i] >= 2){
+                    greyCount++;
+                }
+                else if(sumCount[i] == 2) blackCount++;
+                else if(sumCount[i] == 1) whiteCount++;
+            }
+            System.out.println(whiteCount + " " + blackCount + " " + greyCount);
     }
 }
