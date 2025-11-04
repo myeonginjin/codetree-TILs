@@ -32,7 +32,7 @@ public class Main {
         int whiteCount = 0;
         int blackCount = 0;
 
-        for(int i = 0; i <= OFFSET * 2 + 1; i++){
+        for(int i = 0; i <= OFFSET * 2; i++){
             if(checked[i] == 1) whiteCount++;
             else if(checked[i] == 2) blackCount++;
         }
