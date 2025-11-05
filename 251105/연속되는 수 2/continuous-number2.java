@@ -10,21 +10,17 @@ public class Main {
         int max = 0;
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
-            if(i == 0 || arr[i] != arr[i-1]){
-                if(max < arr[i]) max = arr[i];
-            }
         }
 
-        // int count = 0;
-        // for(int i = 0; i<n; i++){
-        //     if(max == arr[i]){
-        //         while(arr[i] != arr[i-1]){
-        //             count++;
-        //             i++;
-        //         }
-        //     }
-        // }
+        int ans = 0, cnt = 0;
+        for(int i = 0; i<n; i++){
+            if(i >= 1 && arr[i] == arr[i-1]) cnt++;
+            else cnt = 1;
 
-        System.out.println(max);
+            ans = Math.max(ans, cnt);
+        }
+
+        System.out.println(ans);
+
     }
 }
