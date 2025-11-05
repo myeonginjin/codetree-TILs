@@ -7,10 +7,10 @@ public class Main {
         int n = sc.nextInt();
         int[][] arr = new int[OFFSET * 2 + 1][OFFSET * 2 + 1];
         for (int i = 0; i < n; i++) {
-            int x1 = sc.nextInt();
-            int y1 = sc.nextInt();
-            int x2 = sc.nextInt();
-            int y2 = sc.nextInt();
+            int x1 = sc.nextInt() + OFFSET;
+            int y1 = sc.nextInt() + OFFSET;
+            int x2 = sc.nextInt() + OFFSET;
+            int y2 = sc.nextInt() + OFFSET;
 
             // 짝수는 빨간색 = 2
             if(i%2 == 0){
