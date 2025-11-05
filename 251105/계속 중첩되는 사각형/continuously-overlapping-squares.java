@@ -14,18 +14,18 @@ public class Main {
 
             // 짝수는 빨간색 = 2
             if(i%2 == 0){
-                for(int i = x1; i<x2; i++){
+                for(int z = x1; z<x2; z++){
                     for(int j = y1; j<y2; y++){
-                        arr[i][j] = 2;
+                        arr[z][j] = 2;
                     }
                 }
             }
 
             // 홀수는 파란색 = 1
             if(i%2 == 1){
-                for(int i = x1; i<x2; i++){
+                for(int z = x1; z<x2; z++){
                     for(int j = y1; j<y2; y++){
-                        arr[i][j] = 1;
+                        arr[z][j] = 1;
                     }
                 }
             }
