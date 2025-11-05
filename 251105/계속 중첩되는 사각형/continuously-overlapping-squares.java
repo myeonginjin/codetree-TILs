@@ -35,7 +35,7 @@ public class Main {
         int blue = 0;
 
         for(int i = 0; i<=OFFSET*2; i++){
-            for(int j = 0; j<=OFFSET*2; y++){
+            for(int j = 0; j<=OFFSET*2; j++){
                 if(arr[i][j] == 1){
                     blue++;
                 }
