@@ -15,7 +15,7 @@ public class Main {
             // 짝수는 빨간색 = 2
             if(i%2 == 0){
                 for(int z = x1; z<x2; z++){
-                    for(int j = y1; j<y2; y++){
+                    for(int j = y1; j<y2; j++){
                         arr[z][j] = 2;
                     }
                 }
@@ -24,7 +24,7 @@ public class Main {
             // 홀수는 파란색 = 1
             if(i%2 == 1){
                 for(int z = x1; z<x2; z++){
-                    for(int j = y1; j<y2; y++){
+                    for(int j = y1; j<y2; j++){
                         arr[z][j] = 1;
                     }
                 }
