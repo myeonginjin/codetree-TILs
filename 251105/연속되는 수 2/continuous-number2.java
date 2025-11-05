@@ -15,16 +15,16 @@ public class Main {
             }
         }
 
-        int count = 0;
-        for(int i = 0; i<n; i++){
-            if(max == arr[i]){
-                while(arr[i] != arr[i-1]){
-                    count++;
-                    i++;
-                }
-            }
-        }
+        // int count = 0;
+        // for(int i = 0; i<n; i++){
+        //     if(max == arr[i]){
+        //         while(arr[i] != arr[i-1]){
+        //             count++;
+        //             i++;
+        //         }
+        //     }
+        // }
 
-        System.out.println(count);
+        System.out.println(max);
     }
 }
